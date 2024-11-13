@@ -1,0 +1,64 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Documentasiyası",
+        "description": "Laravel Swagger API Documentasiya",
+        "contact": {
+            "email": "support@example.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "oyrenoyret.az",
+            "description": "Local Server"
+        }
+    ],
+    "paths": {
+        "/api/posts": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Bütün Postları Getir",
+                "operationId": "e9eaf7df702a94f4443677bd1a36cfe6",
+                "responses": {
+                    "200": {
+                        "description": "Uğurla Çıxarıldı"
+                    }
+                }
+            }
+        },
+        "/api/posts/{id}": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "summary": "Tək Bir Postları Getir",
+                "operationId": "05d79d8dc5f27fe133a12d0f965cfd7c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "İd-yi yaz",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Uğurla Çıxarıldı"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Posts",
+            "description": "Posts"
+        }
+    ]
+}
